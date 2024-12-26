@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erian <erian@student.42>                   +#+  +:+       +#+        */
+/*   By: erian <erian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 12:33:05 by erian             #+#    #+#             */
-/*   Updated: 2024/08/10 14:16:40 by erian            ###   ########.fr       */
+/*   Updated: 2024/11/18 18:34:19 by erian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -42,6 +43,6 @@ void	polish_list(t_list **list);
 void	append(t_list **list, char *buf);
 void	create_list(t_list **list, int fd);
 char	*get_next_line(int fd);
-char	*get_line(t_list *list);
+char	*get_line_cstm(t_list *list);
 
 #endif
